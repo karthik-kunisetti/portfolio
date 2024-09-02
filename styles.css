@@ -1,0 +1,542 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff5733;
+}
+
+/* Home Section */
+#home {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 36px;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#home p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#home img {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#home img:hover {
+    transform: scale(1.1);
+}
+
+.resume-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #ff7849;
+    transform: scale(1.05);
+}
+
+/* About Section */
+#about {
+    background-color: #fdfdfd;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 4px solid #ff9a9e;
+}
+
+#about h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.1);
+}
+
+#about p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* Skills Section */
+#skills {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 4px solid #f4f4f4;
+}
+
+#skills h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill h3 {
+    font-size: 24px;
+    color: #ff5733;
+    margin-bottom: 15px;
+}
+
+.skill ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #ff5733;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-content,
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* This makes sure the image covers the set dimensions without distortion */
+    border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header ul li a:hover {
+    color: #ff6347;
+}
+
+/* Home Section Styles */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ff6b6b, #556270, #4ecdc4, #f7b733);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+/* About Section Styles */
+#about {
+    padding: 100px 20px;
+    background: linear-gradient(-45deg, #ff6b6b, #4ecdc4, #f7b733, #556270);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Projects Section Styles */
+#projects {
+    padding: 100px 20px;
+    background: linear-gradient(-45deg, #4ecdc4, #556270, #ff6b6b, #f7b733);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+.projects-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.project-item {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 1.2rem;
+}
+
+/* Background Gradient Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-In Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #about h2, #projects h2 {
+        font-size: 2rem;
+    }
+    #about p, .project-item p {
+        font-size: 1rem;
+    }
+    .project-item h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Skills Section */
+#skills {
+    background-color: #e0e0e0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.skill ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #ff5733;
+}
+/* General Styles for Conclusion Section */
+#conclusion {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient background */
+    padding: 60px 20px; /* Generous padding */
+    text-align: center; /* Center align text */
+    color: white; /* White text color */
+    border-top: 5px solid #4e00a2; /* Bold top border */
+    margin-top: 50px; /* Space above the section */
+    position: relative; /* For positioning floating elements */
+    overflow: hidden; /* Hide any overflow */
+}
+
+/* Styling for Conclusion Heading */
+#conclusion h2 {
+    font-size: 3em; /* Large heading font size */
+    margin-bottom: 25px; /* Space below heading */
+    color: #ffffff; /* White text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    animation: slideIn 1s ease-out; /* Slide in animation */
+}
+
+/* Styling for Conclusion Paragraphs */
+#conclusion p {
+    font-size: 1.4em; /* Larger font size */
+    line-height: 1.8; /* Spacing between lines */
+    color: #f3f3f3; /* Off-white text color */
+    margin-bottom: 30px; /* Space below each paragraph */
+    animation: fadeIn 2s ease-out; /* Fade in animation */
+}
+
+/* Emphasis on Final Strong Text */
+#conclusion p strong {
+    color: #ffd700; /* Gold color for emphasis */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+/* Styling for Conclusion Links */
+#conclusion a {
+    color: #ffffff; /* White color for links */
+    background-color: #ff4b2b; /* Bright background color for the button */
+    padding: 12px 25px; /* Padding inside the button */
+    border-radius: 50px; /* Fully rounded button */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.4s ease, transform 0.4s ease; /* Smooth transitions */
+}
+
+#conclusion a:hover {
+    background-color: #ffd700; /* Change color on hover */
+    color: #ff4b2b; /* Change text color on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Floating Background Elements */
+#conclusion::before,
+#conclusion::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.15); /* Translucent white circles */
+    border-radius: 50%;
+    animation: float 7s ease-in-out infinite;
+    z-index: 1;
+}
+
+#conclusion::before {
+    top: -150px;
+    left: -150px;
+}
+
+#conclusion::after {
+    bottom: -150px;
+    right: -150px;
+}
+
+/* Keyframes for Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
